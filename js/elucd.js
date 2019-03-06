@@ -118,10 +118,6 @@ myConnector.init = function(initCallback) {
     };
 
     myConnector.getData = function(table, doneCallback) {
-    	$.ajaxSetup({
-    		headers: {'Authorization': "Basic " + btoa("myusername" + ":" + "mypassword")}
-    	});
-
         $.ajax({
             url: "https://vault.elucd.com/scores/?date_from=2019-01-01&date_to=2019-01-31&cadence=monthly",
             beforeSend: function(xhr) {
